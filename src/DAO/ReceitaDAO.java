@@ -61,29 +61,7 @@ public class ReceitaDAO {
 		return list;
 		
 	}
-	public String INSERT = "INSERT INTO Receita (nome,ingrediente1,possui1,ingrediente2,possui2,nota,tipo) VALUES (?,?,?,?,?,?,?)";
-	public void inserirReceita(Receita receita)  {
-		PreparedStatement pStat;
-		
-		try {
-			pStat = myConn.prepareStatement(INSERT);
-			pStat.setString(1, receita.getNome());
-			pStat.setString(2, receita.getIngrediente1());
-			pStat.setBoolean(3, receita.Possui1());
-			pStat.setString(4, receita.getIngrediente2());
-			pStat.setBoolean(5, receita.Possui2());
-			pStat.setInt(6, receita.getNota());
-			pStat.setString(7, receita.getTipo());
 
-			pStat.execute();
-			JOptionPane.showMessageDialog(null, "Rceita cadastrada com sucesso");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	
-
-	}
 
 
 	public void updateReceitaById(int id, Receita receita) throws SQLException {

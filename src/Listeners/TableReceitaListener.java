@@ -13,9 +13,9 @@ import Models.Receita;
 
 public class TableReceitaListener implements TableModelListener{
 	
-	private JTable table;
 	private DefaultTableModel model;
 	private ReceitaDAO receitaDao;
+	private JTable table;
 	
 	public TableReceitaListener(JTable table) throws SQLException {
 		this.table = table;
@@ -27,10 +27,10 @@ public class TableReceitaListener implements TableModelListener{
 		System.out.println("Update");
 		System.out.println(tableChange.getFirstRow());
 		int rowChanged = tableChange.getFirstRow();
-		ArrayList<Receita> columnsValues = new ArrayList<Receita>();
+		ArrayList columnsValues = new ArrayList();
 		for (int columnIndex = 0 ; columnIndex < this.model.getColumnCount() ;  columnIndex ++) {
 			System.out.println(this.model.getValueAt(rowChanged, columnIndex));
-			columnsValues.add((Receita) this.model.getValueAt(rowChanged, columnIndex));
+			columnsValues.add(this.model.getValueAt(rowChanged, columnIndex));
 		}
 		Receita receita = new Receita(
 				columnsValues.get(0).toString(),
