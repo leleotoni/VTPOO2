@@ -1,0 +1,17 @@
+CREATE DATABASE poo2;
+
+CREATE TABLE `poo2`.`receitas` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NULL,
+  `ingrediente1` VARCHAR(45) NULL,
+  `possui1` TINYINT NULL,
+  `ingrediente2` VARCHAR(45) NULL,
+  `possui2` TINYINT NULL,
+  `nota` INT NULL,
+  `tipo` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+  
+INSERT INTO `poo2`.`receitas` (`id`, `nome`, `ingrediente1`, `possui1`, `ingrediente2`, `possui2`, `nota`, `tipo`) VALUES ('1', 'Massa de Pizza', 'Farinha de Trigo', '1', 'Iorgute Grego', '0', '8', '3');
+INSERT INTO `poo2`.`receitas` (`id`, `nome`, `ingrediente1`, `possui1`, `ingrediente2`, `possui2`, `nota`, `tipo`) VALUES ('2', 'Trufas', 'Chocolate Derretido', '1', 'Cream Cheese', '1', '9', '3');
+INSERT INTO `poo2`.`receitas` (`id`, `nome`, `ingrediente1`, `possui1`, `ingrediente2`, `possui2`, `nota`, `tipo`) VALUES ('3', 'Sorbet de Limão', 'Refri. de Limão', '0', 'Leite Condensado', '0', '8', '3');
+INSERT INTO `poo2`.`receitas` (`id`, `nome`, `ingrediente1`, `possui1`, `ingrediente2`, `possui2`, `nota`, `tipo`) VALUES ('4', 'Biscoito de Aveia', 'Bananas', '1', 'Aveia', '1', '7', '2');
